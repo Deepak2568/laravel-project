@@ -50,7 +50,7 @@ class StudentController extends Controller
         $student = Student::find($id);
         if ($student) {
             $student->delete();
-            return redirect()->to('/')->with('success', 'Student deleted successfully');
+            return redirect()->to('/')->with('del_msg', 'Student deleted successfully');
         }
         return redirect()->to('/')->with('error', 'Student not found');
     }
